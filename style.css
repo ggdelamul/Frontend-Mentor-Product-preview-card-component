@@ -1,0 +1,109 @@
+/*reset css*/
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+/*root */
+:root {
+  --fontParagraphe: 14px;
+  --cream: hsl(30, 38%, 92%);
+  --darkCyan: hsl(158, 36%, 37%);
+  --darkBlue: hsl(212, 21%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+/*css*/
+body {
+  font-size: var(--fontParagraphe);
+}
+main {
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card-container {
+  width: 320px;
+  height: 80%;
+  background-color: var(--white);
+  background-clip: border-box;
+  border-radius: 15px;
+}
+
+.picture__container img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.body__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body__container--texte,
+.body__container--price,
+.body__container--button {
+  width: 90%;
+  padding-left: 5px;
+  padding-top: 15px;
+}
+.body__container--texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.body__container--texte p:first-child {
+  font-size: var(--fontParagraphe);
+  letter-spacing: 0.3rem;
+}
+.body__container--texte p {
+  color: var(--darkBlue);
+  font-size: var(--fontParagraphe);
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.body__container--texte h1 {
+  font-family: "Fraunces";
+  font-weight: 700;
+}
+.body__container--price {
+  display: flex;
+  align-items: center;
+}
+.body__container--price h2 {
+  color: var(--darkCyan);
+  font-family: "Fraunces";
+}
+.body__container--price p {
+  text-decoration-line: line-through;
+  margin-left: 15px;
+}
+.body__container--button button {
+  width: 100%;
+  background-color: var(--darkCyan);
+  color: var(--white);
+  font-size: var(--fontParagraphe);
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+.body__container--button img {
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 1440px) {
+  .card-container {
+    display: flex;
+    width: 600px;
+    height: 50%;
+  }
+  .picture__container img {
+    border-top-right-radius: none;
+    border-bottom-right-radius: 5px;
+    margin: auto;
+  }
+}
