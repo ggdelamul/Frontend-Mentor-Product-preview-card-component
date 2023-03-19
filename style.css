@@ -30,7 +30,7 @@ main {
   height: 80%;
   background-color: var(--white);
   background-clip: border-box;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .picture__container img {
@@ -90,6 +90,9 @@ main {
   border: none;
   border-radius: 5px;
   padding: 15px;
+}
+.body__container--button button:hover {
+  background-color: hsl(158, 36%, 27%);
 }
 .body__container--button img {
   margin-right: 15px;
